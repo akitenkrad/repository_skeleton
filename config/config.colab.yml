@@ -1,0 +1,35 @@
+train:
+    exp_name: exp
+    k_folds: 3
+    epochs: 5
+    batch_size: 128
+    valid_size: 0.1
+    test_size: 0.1
+    lr: 0.001
+    lr_decay: 0.9
+    early_stop_patience: 5
+    logging_per_batch: 25
+
+lr_finder:
+    initial_value: 0.000000001
+    final_value: 10.0
+    beta: 0.98
+
+data:
+    data_path: /content/data
+    cache_path: /content/drive/MyDrive/Cloud/Outputs/nlp-tools/__cache__
+
+weights:
+    global_weights_dir: /content/drive/MyDrive/Cloud/Outputs/nlp-tools/weights
+    log_weights_dir: /content/drive/MyDrive/Cloud/Outputs/nlp-tools/logs # to be set in utils/utils.py
+
+log:
+    log_dir: /content/logs
+    log_filename: system.log
+
+output:
+    out_dir: /content/outputs
+
+backup:
+    backup: True
+    backup_dir: /content/drive/MyDrive/Cloud/Outputs/nlp-tools/backup
